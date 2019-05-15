@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Sitecore.Plugin.IdentityProvider.Auth0</AssemblyName>
+    <RootNamespace>Sitecore.Plugin.IdentityProvider.Auth0</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="sitecore\Sitecore.Plugin.IdentityProvider.Auth0\Config\readme.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sitecore\Sitecore.Plugin.IdentityProvider.Auth0\Config\Sitecore.Plugin.IdentityProvider.Auth0.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sitecore\Sitecore.Plugin.IdentityProvider.Auth0\Sitecore.Plugin.manifest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="2.1.2" />
+    <PackageReference Include="Sitecore.Framework.Runtime.Abstractions" Version="4.0.0-*" />
+    <PackageReference Include="Sitecore.Plugin.IdentityProviders" Version="2.0.0" />
+  </ItemGroup>
+</Project>

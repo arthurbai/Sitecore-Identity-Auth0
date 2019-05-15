@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <Sitecore>
+    <ExternalIdentityProviders>
+      <IdentityProviders>
+        <Auth0 type="Sitecore.Plugin.IdentityProviders.IdentityProvider, Sitecore.Plugin.IdentityProviders">
+          <AuthenticationScheme>Auth0</AuthenticationScheme>
+          <DisplayName>Auth0</DisplayName>
+          <Enabled>true</Enabled>
+          <ClientId></ClientId>
+          <ClientSecret></ClientSecret>
+          <Domain></Domain>
+          <Scopes>openid profile email</Scopes>
+          <ClaimsIssuer>Auth0</ClaimsIssuer>
+          <SignedOutRedirectUri>/login</SignedOutRedirectUri>
+          <ClaimsTransformations>
+            <ClaimsTransformation1 type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
+              <SourceClaims>
+                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" />
+              </SourceClaims>
+              <NewClaims>
+                <Claim1 type="email" />
+              </NewClaims>
+            </ClaimsTransformation1 >
+            <ClaimsTransformation2 type="Sitecore.Plugin.IdentityProviders.DefaultClaimsTransformation, Sitecore.Plugin.IdentityProviders">
+              <SourceClaims>
+                <Claim1 type="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/idp" />
+              </SourceClaims>
+              <NewClaims>
+                <Claim1 type="idp" />
+              </NewClaims>
+            </ClaimsTransformation2>
+          </ClaimsTransformations>
+        </Auth0>
+      </IdentityProviders>
+    </ExternalIdentityProviders>
+  </Sitecore>
+</Settings>
